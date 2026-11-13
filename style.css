@@ -11,7 +11,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
 }
 
 /* Основной контейнер баннера */
@@ -81,7 +80,6 @@ body {
 }
 
 .brand-title {
-  font-size: clamp(36px, 5vw, 62px);
   font-weight: 900;
   color: #141414;
   line-height: 0.95;
@@ -155,7 +153,6 @@ body {
 
 .slogan {
   text-align: right;
-  font-size: clamp(20px, 2.5vw, 28px);
   font-weight: 900;
   color: #141414;
   line-height: 1.1;
@@ -177,7 +174,7 @@ body {
   text-align: center;
   padding: 20px;
   color: #555;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -206,7 +203,6 @@ body {
 }
 
 .contact-label {
-  font-size: clamp(18px, 2.2vw, 25px);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -237,7 +233,6 @@ body {
 }
 
 .phone-number {
-  font-size: clamp(24px, 3.2vw, 38px);
   font-weight: 900;
   color: #ffd000;
   line-height: 1;
@@ -381,6 +376,7 @@ body {
 
         /* Шапка сайта */
         .header {
+            width: 100%;
             background-color: var(--dark-color);
             color: white;
             position: sticky;
@@ -510,10 +506,11 @@ body {
 
         /* Футер */
         .footer {
+            width: 100%;
             background-color: var(--dark-color);
             color: #aeaeae;
             padding: 40px 20px;
-            font-size: 14px;
+            font-size: 12px;
             border-top: 1px solid #222;
         }
 
