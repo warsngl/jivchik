@@ -1,270 +1,133 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЖИВЧИК: Мастер на все руки — Ремонт бытовой техники в Сыктывкаре</title>
-    <style>
-        :root {
-            --primary-color: #ffcc00; /* Желтый из баннера */
-            --dark-color: #111111;    /* Темный из баннера */
-            --light-color: #dbdecb;
-            --text-color: #222222;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--light-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* Шапка сайта */
-        .header {
-            background-color: var(--dark-color);
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 3px solid var(--primary-color);
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            color: white;
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: var(--primary-color);
-        }
-
-        .header-phones {
-            display: flex;
-            gap: 20px;
-        }
-
-        .header-phone {
-            font-size: 18px;
-            font-weight: 700;
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .header-phone:hover {
-            color: var(--primary-color);
-        }
-
-        /* Хиро блок */
-        .hero {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            padding: 60px 20px;
-            background: #f4f4f4;
-        }
-
-        .hero-container {
-
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 0; /* Полностью убирает промежуток между колонками */
-    align-items: center;
-    width: 100%;
-}
-
-
-        .hero-content h1 {
-            font-size: 42px;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            color: var(--dark-color);
-        }
-
-        .hero-content p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            color: #444;
-        }
-
-        .promo-badge {
-            background-color: #28a745;
-            color: white;
-            display: inline-block;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--dark-color);
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-            padding: 15px 35px;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: var(--primary-color);
-            color: var(--dark-color);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255,204,0,0.3);
-        }
-
-        /* Контейнер для баннера */
-        .hero-image-wrapper {
-    width: 100%;
-    border-radius: 12px;
-    overflow: hidden; /* Обрезает картинку по скругленным краям */
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-}
-
-    .hero-banner {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-
-        /* Футер */
-        .footer {
-            background-color: var(--dark-color);
-            color: #aeaeae;
-            padding: 40px 20px;
-            font-size: 14px;
-            border-top: 1px solid #222;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .footer-info h4 {
-            color: white;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        .footer-links a {
-            color: #aeaeae;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Для адаптивности на 1024px и мобильных */
-@media (max-width: 1024px) {
-    .hero-content h1 span {
-        display: block; /* Принудительный перенос на новую строку */
-    }
-    
-    .hero-container {
-        gap: 20px; /* Небольшой отступ между текстом и картинкой на планшетах */
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-container {
-        grid-template-columns: 1fr; /* На мобильных выстраиваем в одну колонку */
-        text-align: center;
-        gap: 30px;
-    }
-}
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Живчик: Мастер на все руки</title>
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ШАПКА -->
-    <header class="header">
-        <div class="header-container">
-            <a href="#" class="logo">ЖИВЧИК: <span>Мастер на все руки</span></a>
-            <div class="header-phones">
-                <a href="tel:+79042395027" class="header-phone">☎ +7 (904) 239-50-27</a>
-                <a href="tel:252027" class="header-phone">☎ 25-20-27</a>
-            </div>
+  <div class="banner">
+    <!-- Основная светлая часть -->
+    <div class="banner-main">
+      
+      <!-- Левая колонка: Логотип + Услуги -->
+      <div class="left-col">
+        <div class="header-box">
+          <div class="mascot-avatar">
+            <!-- Замените текст ниже на <img src="mascot.png" alt="Живчик"> -->
+            ФОТО<br>МАСТЕРА
+          </div>
+          <div class="title-group">
+            <h1 class="brand-title">ЖИВЧИК:</h1>
+            <div class="brand-subtitle"><span>МАСТЕР НА ВСЕ РУКИ</span></div>
+          </div>
         </div>
-    </header>
 
-    <!-- ХИРО БЛОК -->
-    <main class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="promo-badge">Скидка 10% за подписку на ВК!</div>
-                <h1>Вызов мастера <span>на дом в Сыктывкаре</span></h1>
+        <div class="services-grid">
+          <!-- Услуга 1 -->
+          <div class="service-item">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+            </div>
+            <div class="service-text">МУЖ НА ЧАС</div>
+          </div>
 
-                <p>Профессиональный ремонт стиральных и посудомоечных машин, холодильников, окон и сантехники. Быстро, надёжно и с гарантией качества!</p>
-                <a href="https://vk.com/ctirkaxolod" target="_blank" class="cta-button">Оставить заявку ВКонтакте</a>
+          <!-- Услуга 2 -->
+          <div class="service-item">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24"><path d="M18 2.01L6 2c-1.1 0-2 .89-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.11-.9-1.99-2-1.99zM18 20H6v-9h12v9zm0-11H6V4h12v5zm-6 8c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z"/></svg>
             </div>
-            
-            <!-- БАННЕР С СЫЛКОЙ ДЛЯ GITHUB PAGES -->
-            <div class="hero-image-wrapper">
-                 <picture style="width: 100%;">
-        <!-- Если экран 768px или меньше, покажет мобильную версию -->
-        <source media="(max-width: 768px)" srcset="img_mobile.png">
-        <!-- Для всех остальных экранов (ПК и планшеты) останется обычная версия -->
-        <img src="image_hero.png" alt="ЖИВЧИК: Мастер на все руки. Ремонт техники в Сыктывкаре" class="hero-banner">
-    </picture>
+            <div class="service-text">РЕМОНТ СТИРАЛЬНЫХ МАШИН</div>
+          </div>
+
+          <!-- Услуга 3 -->
+          <div class="service-item">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24"><path d="M19 14v-2h-4V9h3V7h-8v2h3v3H8c-2.21 0-4 1.79-4 4v4h4v-4h11v-2z"/></svg>
             </div>
+            <div class="service-text">САНТЕХНИКА</div>
+          </div>
+
+          <!-- Услуга 4 -->
+          <div class="service-item">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24"><path d="M7 2h10c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2zm0 2v5h10V4H7zm0 7v9h10v-9H7zm2-5h1v2H9V6zm0 7h1v4H9v-4z"/></svg>
+            </div>
+            <div class="service-text">РЕМОНТ ХОЛОДИЛЬНИКОВ</div>
+          </div>
+
+          <!-- Услуга 5 -->
+          <div class="service-item">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 8h-6V5h6v6zm-8-6v6H5V5h6zm-6 8h6v6H5v-6zm8 6v-6h6v6h-6z"/></svg>
+            </div>
+            <div class="service-text">РЕМОНТ ОКОН</div>
+          </div>
+
+          <!-- Услуга 6 -->
+          <div class="service-item">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V8h12v12zm0-14H6V4h12v2zM9 11h6v2H9v-2zm0 4h6v2H9v-2z"/></svg>
+            </div>
+            <div class="service-text">РЕМОНТ ПОСУДОМОЕЧНЫХ МАШИН</div>
+          </div>
         </div>
-    </main>
+      </div>
 
-    <!-- ФУТЕР -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-info">
-                <h4>ЖИВЧИК-Сервис</h4>
-                <p>Выездные ремонтные услуги в Сыктывкаре и пригороде.</p>
-                <p>Услуги: Муж на час, сантехника, ремонт окон и крупной бытовой техники.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Контакты</h4>
-                <a href="tel:+79042395027">Моб: +7 (904) 239-50-27</a>
-                <a href="tel:252027">Городской: 25-20-27</a>
-                <a href="https://vk.com/ctirkaxolod" target="_blank">Группа ВКонтакте</a>
-            </div>
+      <!-- Правая колонка: Слоган + Техника -->
+      <div class="right-col">
+        <div class="slogan">БЫСТРО!<br>НАДЁЖНО!</div>
+        <div class="appliances-placeholder">
+          Место для фото бытовой техники<br>(стиральная машина, холодильник, инструменты)
         </div>
-    </footer>
+      </div>
+
+    </div>
+
+    <!-- Нижний тёмный блок контактов -->
+    <div class="banner-footer">
+      <div class="contact-main">
+        <div class="contact-label">СВЯЖИТЕСЬ С НАМИ!</div>
+        <a href="tel:89042395027" class="phone-row">
+          <span class="phone-circle">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </span>
+          <span class="phone-number">89042395027</span>
+        </a>
+      </div>
+
+      <div class="qr-section">
+        <div class="short-number-box">
+          <div class="qr-hint">НАВЕДИТЕ КАМЕРУ<br>И СВЯЖИТЕСЬ С НАМИ</div>
+          <a href="tel:252027" class="short-phone">
+            <span class="short-phone-icon">
+              <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+            </span>
+            <span class="short-phone-digits">252027</span>
+          </a>
+        </div>
+
+        <div class="qr-code-box">
+          <svg viewBox="0 0 100 100" fill="#141414">
+            <path d="M10,10 h30 v30 h-30 z M15,15 v20 h20 v-20 z M20,20 h10 v10 h-10 z"/>
+            <path d="M60,10 h30 v30 h-30 z M65,15 v20 h20 v-20 z M70,20 h10 v10 h-10 z"/>
+            <path d="M10,60 h30 v30 h-30 z M15,65 v20 h20 v-20 z M20,70 h10 v10 h-10 z"/>
+            <rect x="45" y="15" width="10" height="10"/>
+            <rect x="45" y="35" width="10" height="20"/>
+            <rect x="15" y="45" width="20" height="10"/>
+            <rect x="65" y="45" width="25" height="10"/>
+            <rect x="45" y="65" width="15" height="15"/>
+            <rect x="70" y="65" width="20" height="25"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
